@@ -1,3 +1,4 @@
+use c9;
 CREATE TABLE IF NOT EXISTS usuario(
 	idUsuario int primary key auto_increment,
 	nombre varchar(50) not null,
