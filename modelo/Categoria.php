@@ -105,8 +105,9 @@ class Categoria {
          try {
             $query = "SELECT * FROM categoria WHERE idCategoria = ?";
             $execute = $this->conn->prepare($query);
-            $execute->bindParam($execute, $query);
-            $execute->execute(1, $this->idCategoria, PDO::PARAM_INT);
+            $execute->bindParam(1, $this->idCategoria, PDO::PARAM_INT);
+            $execute->execute();
+            $this->conn->close();
             return $execute->fetchAll(PDO::FETCH_OBJ);
         } catch (PDOException $ex) {
            echo $ex->getMessage(); 

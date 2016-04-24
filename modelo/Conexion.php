@@ -3,10 +3,10 @@
 class Conexion extends PDO {
     private $conn = null;
     private $server = "localhost";
-    private $db = "tienda";
-    private $port = 3307;
+    private $db = "c9";
+    private $port = 3306;
     private $user = "root";
-    private $passwd = "usbw";
+    private $passwd = "";
 
     function __construct() {
         try {
