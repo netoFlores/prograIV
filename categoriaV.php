@@ -11,17 +11,18 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </head>
     <body>
+
         <form method="post">
             <input type="search" required="true" placeholder="Buscar" name="buscar"><button type="submit" name="btnBuscar">Buscar</button>
         </form>
         <br><br>
         <?php
         include_once('controlador/CategoriaC.php');
-        if(isset($_GET["delete"])){
+        if (isset($_GET["delete"])) {
             $c = new CategoriaC();
             $c->delete($_GET["delete"]);
         }
-        
+
         if (isset($_GET["id"])) {
             $cc = new CategoriaC();
             $dato = $cc->busqueda($_GET["id"]);
